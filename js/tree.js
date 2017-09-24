@@ -8,8 +8,6 @@ require.config({
 
 require(["d3"], function(d3) {
 
-    console.log(d3);
-
     d3.select("#maindiv${divnum}").selectAll("svg").remove();
 
     var svg = d3.select("#maindiv${divnum}").append("svg")
@@ -21,7 +19,7 @@ require(["d3"], function(d3) {
         height = 1060,
         g = svg.append("g").attr("transform", "translate(" + (width / 2 + 40) + "," + (height / 2 + 90) + ")");
 
-    console.log(g);
+    // console.log(g);
     var stratify = d3.stratify()
         .parentId(function(d) { return d.id.substring(0, d.id.lastIndexOf(".")); });
 
